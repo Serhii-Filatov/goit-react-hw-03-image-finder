@@ -1,0 +1,27 @@
+.li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  width: 420px;
+}
+
+.btn {
+  margin-left: 20px;
+  padding: 5px 30px;
+  font-size: 14px;
+
+  background-color: transparent;
+  border: solid 1px #1e1e1e;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #ebebeb;
+}
+
+.btn:active {
+  background-color: #c8c8c8;
+  color: #828282;
+}

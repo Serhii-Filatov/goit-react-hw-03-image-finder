@@ -1,6 +1,14 @@
-// UNDONE Компонент элемента списка с изображением.
-// Создает DOM-элемент следующей структуры.
+import css from './ImageGalleryItem.module.css';
 
-<li class="gallery-item">
-  <img src="" alt="" />
-</li>;
+export const ImageGalleryItem = ({ src, alt, openModal }) => {
+  return (
+    <li className={css.ImageGalleryItem}>
+      <img
+        className={css.ImageGalleryItemPicture}
+        src={src}
+        alt={alt}
+        onClick={() => openModal({ largeImageURL: src, tags: alt })}
+      />
+    </li>
+  );
+};

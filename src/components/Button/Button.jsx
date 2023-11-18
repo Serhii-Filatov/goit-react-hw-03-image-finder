@@ -1,8 +1,9 @@
-// UNDONE При нажатии на кнопку Load more
-// UNDONE должна догружаться следующая порция изображений
-// UNDONE и рендериться вместе с предыдущими.
-// UNDONE Кнопка должна рендерится только тогда,
-// UNDONE когда есть какие-то загруженные изобаржения.
-// UNDONE Если массив изображений пуст, кнопка не рендерится.
+import css from './Button.module.css';
 
-<button type="button">Load more</button>;
+export const Button = ({ onClick }) => {
+  return (
+    <button className={css.Button} onClick={onClick} type="button">
+      Load more
+    </button>
+  );
+};

@@ -1,27 +1,24 @@
-// UNDONE Компонент принимает один проп
-// UNDONE onSubmit - функцию для передачи значения инпута при сабмите формы.
-import React, { Component } from 'react';
+import React from 'react';
 import { StyledSearchbar } from './Styled';
+import { HiSearch } from 'react-icons/hi';
 
-// Создает DOM-элемент следующей структуры.
-export default class Searchbar extends Component {
-  render() {
-    return (
-      <StyledSearchbar>
-        <form className="SearchForm">
-          <button type="submit" className="SearchFormButton">
-            <span className="SearchFormButtonLabel">Search</span>
-          </button>
+export const Searchbar = ({ onSubmit }) => {
+  return (
+    <StyledSearchbar>
+      <form className="SearchForm" onSubmit={onSubmit}>
+        <button type="submit" className="SearchFormButton">
+          <HiSearch size={24} className="SearchFormButtonLabel" />
+        </button>
 
-          <input
-            className="SearchFormInput"
-            type="text"
-            autocomplete="off"
-            autofocus
-            placeholder="Search images and photos"
-          />
-        </form>
-      </StyledSearchbar>
-    );
-  }
-}
+        <input
+          className="SearchFormInput"
+          name="search"
+          type="text"
+          autoComplete="off"
+          autoFocus
+          placeholder="Search images and photos"
+        />
+      </form>
+    </StyledSearchbar>
+  );
+};
